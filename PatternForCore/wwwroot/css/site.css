@@ -1,0 +1,75 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+.login-form {
+    width: 25rem;
+    height: 29rem;
+    position: fixed;
+    top: 40%;
+    margin-top: -9.375rem;
+    left: 50%;
+    margin-left: -12.5rem;
+    background-color: #ffffff;
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
+}
+
+.centered {
+    text-align: center;
+}
+
+.transp {
+    opacity: .8;
+    background: #D3D3D3;
+}
+
+.loading {
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(102, 102, 102);
+    z-index: 30001;
+    opacity: 0.8;
+    text-align: center;
+    display: none;
+}
+
+.loading-gif {
+    margin-top: 15rem;
+}

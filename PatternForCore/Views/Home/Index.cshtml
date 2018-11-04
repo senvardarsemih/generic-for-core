@@ -1,0 +1,70 @@
+﻿@model IList<PatternForCore.Model.Common.Movie>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="wrapper">
+    <h2>Film Listesi</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-condensed table-hover">
+            <tr>
+                <th>
+                    Film Adı
+                </th>
+                <th>
+                    Yönetmen
+                </th>
+                <th>
+                    Yıl
+                </th>
+                <th>
+                    Tür
+                </th>
+                <th>
+                    Yorumlar
+                </th>
+            </tr>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Director)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Year)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Genre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Comments)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<h2>Film Ekle</h2>
+<form action="@Url.Action("SaveMovie")" method="post">
+    <div class="form-group">
+        <input type="text" maxlength="100" class="form-control" id="Title" name="Title" placeholder="Filmin Adı">
+    </div>
+    <div class="form-group">
+        <input type="text" maxlength="50" class="form-control" id="Director" name="Director" placeholder="Yönetmen">
+    </div>
+    <div class="form-group">
+        <input type="number" min="1900" max="2018" class="form-control" id="Year" name="Year" placeholder="Yapım Yılı">
+    </div>
+    <div class="form-group">
+        <input type="text" maxlength="50" class="form-control" id="Genre" name="Genre" placeholder="Türü">
+    </div>
+    <div class="form-group">
+        <input type="text" maxlength="200" class="form-control" id="Comments" name="Comments" placeholder="Yorumlar">
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

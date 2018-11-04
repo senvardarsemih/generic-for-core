@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Register";
+    Layout = "_Layout";
+}
+
+<h2>Kayıt Ol</h2>
+
+<form action="@Url.Action("Register")" method="POST">
+    <div class="form-group">
+        <input type="text" class="form-control" id="Email" name="Email" placeholder="Mail">
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" id="Password" name="Password" placeholder="Şifre">
+    </div>
+    <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+</form>
