@@ -40,7 +40,6 @@ namespace PatternForCore.Model.Base
         public bool IsActive { get; set; }
 
         [ScaffoldColumn(false)]
-        [Index(IsUnique = true)]
         public Guid Guid { get; set; }
 
         /// <summary>
