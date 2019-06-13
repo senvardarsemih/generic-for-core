@@ -6,15 +6,15 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using PatternForCore.Data.EFContext;
-using PatternForCore.Data.Factory;
-using PatternForCore.Data.Repositories.Base;
-using PatternForCore.Data.Repositories.Interfaces;
-using PatternForCore.Data.UOW;
-using PatternForCore.Model.Configuration;
-using PatternForCore.Model.Identity;
-using PatternForCore.Service;
-using PatternForCore.Service.Interfaces;
+using PatternForCore.Core.EFContext;
+using PatternForCore.Core.Factory;
+using PatternForCore.Core.Repositories.Base;
+using PatternForCore.Core.Repositories.Interfaces;
+using PatternForCore.Core.Uow;
+using PatternForCore.Models.Configuration;
+using PatternForCore.Models.Identity;
+using PatternForCore.Services;
+using PatternForCore.Services.Base.Contracts;
 
 namespace PatternForCore
 {
@@ -38,16 +38,16 @@ namespace PatternForCore
         {
             services.AddMvc();
             services.Configure<ConnectionSettings>(Configuration.GetSection("ConnectionStrings"));
-            services.AddDbContext<Data.EFContext.DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddScoped<IDatabaseContext, Data.EFContext.DatabaseContext>();
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IDatabaseContext, Core.EFContext.DatabaseContext>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            services.AddTransient(typeof(IMovieService), typeof(MovieService));
+            services.AddTransient(typeof(IMovieServices), typeof(MovieServices));
             services.AddTransient<IContextFactory, ContextFactory>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<Data.EFContext.DatabaseContext>()
+                .AddEntityFrameworkStores<DatabaseContext>()
                 .AddDefaultTokenProviders();
 
             services.Configure<IdentityOptions>(options =>

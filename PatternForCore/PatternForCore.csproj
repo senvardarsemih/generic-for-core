@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.5" />
     <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="3.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
@@ -23,8 +22,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PatternForCore.Model\PatternForCore.Model.csproj" />
-    <ProjectReference Include="..\PatternForCore.Service\PatternForCore.Service.csproj" />
+    <ProjectReference Include="..\PatternForCore.Models\PatternForCore.Models.csproj" />
+    <ProjectReference Include="..\PatternForCore.Services\PatternForCore.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PatternForCore.Service">
+      <HintPath>..\PatternForCore.Service\bin\Debug\netcoreapp2.2\PatternForCore.Service.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

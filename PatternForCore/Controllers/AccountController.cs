@@ -5,9 +5,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
-using PatternForCore.Model.DTO;
-using PatternForCore.Model.Identity;
-using PatternForCore.Models;
+using PatternForCore.Models.DTO;
+using PatternForCore.Models.Identity;
 
 namespace PatternForCore.Controllers
 {

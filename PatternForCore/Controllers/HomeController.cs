@@ -1,35 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using PatternForCore.Model.Common;
 using PatternForCore.Models;
-using PatternForCore.Service.Interfaces;
+using PatternForCore.Models.Common;
+using PatternForCore.Services.Base.Contracts;
 
 namespace PatternForCore.Controllers
 {
     public class HomeController : Controller
     {
-        public readonly IMovieService _movieService;
+        public readonly IMovieServices _movieServices;
 
-        public HomeController(IMovieService movieService)
+        public HomeController(IMovieServices movieServices)
         {
-            _movieService = movieService;
+            _movieServices = movieServices;
         }
 
 
         [Authorize]
         public IActionResult Index()
         {
-            return View(_movieService.GetMovies());
+            return View(_movieServices.GetMovies());
         }
 
         public IActionResult SaveMovie(Movie movieItem)
         {
-            _movieService.AddMovie(movieItem);
+            _movieServices.AddMovie(movieItem);
             return RedirectToAction("Index");
         }
 
