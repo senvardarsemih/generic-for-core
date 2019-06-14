@@ -2524,6 +2524,11 @@
       "PatternForCore.Models/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity": "2.2.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
+          "System.ComponentModel.Annotations": "4.5.0"
+        },
         "compile": {
           "bin/placeholder/PatternForCore.Models.dll": {}
         },

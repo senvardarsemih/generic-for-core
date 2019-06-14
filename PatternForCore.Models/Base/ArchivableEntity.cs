@@ -1,6 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PatternForCore.Models.Base
 {
@@ -9,14 +7,14 @@ namespace PatternForCore.Models.Base
         /// <summary>
         /// indicates whether the entity is archived
         /// </summary>
-        [ScaffoldColumn(false)]
+        //[ScaffoldColumn(false)]
         public bool IsArchived { get; set; }
 
         /// <summary>
         /// indicates the archived date
         /// </summary>
-        [ScaffoldColumn(false)]
-        [Column(TypeName = "DateTime2")]
+        //[ScaffoldColumn(false)]
+        // [Column(TypeName = "DateTime2")]
         public DateTime? ArchiveDate { get; set; }
 
         /// <summary>
