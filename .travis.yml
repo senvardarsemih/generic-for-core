@@ -1,2 +1,8 @@
 language: csharp
 solution: PatternForCore.sln
+mono: none
+dotnet: 2.2.400-preview-010195
+script:
+  - dotnet restore
+  - dotnet build
+  - dotnet test ./PatternForCore.Tests/
