@@ -5,4 +5,4 @@ dotnet: 2.2
 script:
   - dotnet restore
   - dotnet build
-  - dotnet test ./PatternForCore.Tests/
+  - dotnet test ./src/PatternForCore.Tests/
