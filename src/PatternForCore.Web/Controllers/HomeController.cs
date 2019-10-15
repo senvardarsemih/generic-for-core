@@ -5,11 +5,11 @@ using PatternForCore.Models;
 using PatternForCore.Models.Common;
 using PatternForCore.Services.Base.Contracts;
 
-namespace PatternForCore.Controllers
+namespace PatternForCore.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public readonly IMovieServices _movieServices;
+        private readonly IMovieServices _movieServices;
 
         public HomeController(IMovieServices movieServices)
         {

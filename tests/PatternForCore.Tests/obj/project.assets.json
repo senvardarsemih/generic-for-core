@@ -4446,7 +4446,7 @@
       ]
     },
     "System.Collections.Specialized/4.3.0": {
-      "sha512": "NoPBj0ykejqAWW4p4gGtrrL+3c84ZLSvGnHgq422ew1Rj4WKj1FA8/BCybqC111EtgcqUl6ZJNFYYS22HLgbjA==",
+      "sha512": "Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
       "type": "package",
       "path": "system.collections.specialized/4.3.0",
       "files": [
@@ -4700,7 +4700,7 @@
       ]
     },
     "System.ComponentModel.Primitives/4.3.0": {
-      "sha512": "j8GUkCpM8V4d4vhLIIoBLGey2Z5bCkMVNjEZseyAlm4n5arcsJOeI3zkUP+zvZgzsbLTYh4lYeP/ZD/gdIAPrw==",
+      "sha512": "KMVuoQ+8bMQ/Z59M3s64num5AD74X5YSqVc7ibwGkPTfmmkl2W8VuSxLRJtpw4KzQrSKUgR0BLbF0adPfcTSGQ==",
       "type": "package",
       "path": "system.componentmodel.primitives/4.3.0",
       "files": [
@@ -4738,7 +4738,7 @@
       ]
     },
     "System.ComponentModel.TypeConverter/4.3.0": {
-      "sha512": "16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
+      "sha512": "HZiP0DwTHJ+C+rdFqP47nBYUh5283kcwXIGY2zOVVhsJmVI/2tYiX2zNRdjRQRHsTox58Ydkec6h0pWSh8wAsw==",
       "type": "package",
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
@@ -8148,11 +8148,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Experimentals\\genericforcore\\tests\\PatternForCore.Tests\\PatternForCore.Tests.csproj",
+      "projectUniqueName": "C:\\Repos\\github\\generic-for-core\\tests\\PatternForCore.Tests\\PatternForCore.Tests.csproj",
       "projectName": "PatternForCore.Tests",
-      "projectPath": "C:\\Experimentals\\genericforcore\\tests\\PatternForCore.Tests\\PatternForCore.Tests.csproj",
+      "projectPath": "C:\\Repos\\github\\generic-for-core\\tests\\PatternForCore.Tests\\PatternForCore.Tests.csproj",
       "packagesPath": "C:\\Users\\Hesapkurdu\\.nuget\\packages\\",
-      "outputPath": "C:\\Experimentals\\genericforcore\\tests\\PatternForCore.Tests\\obj\\",
+      "outputPath": "C:\\Repos\\github\\generic-for-core\\tests\\PatternForCore.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8166,17 +8166,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\Hesapkurdu\\Desktop\\Local Nuget": {},
         "http://repository.hesapkurdu.com:9191/nuget/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Models\\PatternForCore.Models.csproj": {
-              "projectPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Models\\PatternForCore.Models.csproj"
+            "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Models\\PatternForCore.Models.csproj": {
+              "projectPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Models\\PatternForCore.Models.csproj"
             },
-            "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Services\\PatternForCore.Services.csproj": {
-              "projectPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Services\\PatternForCore.Services.csproj"
+            "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Services\\PatternForCore.Services.csproj": {
+              "projectPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Services\\PatternForCore.Services.csproj"
             }
           }
         }
@@ -8220,10 +8221,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

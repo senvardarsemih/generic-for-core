@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using PatternForCore.Core.Uow;
 using PatternForCore.Models.Common;
 using System.Linq;
+using PatternForCore.Services.Base.Contracts;
 
 namespace PatternForCore.Services
 {
-    public class MovieServices
+    public class MovieServices : IMovieServices
     {
         private readonly IUnitOfWork _unitOfWork;
 

@@ -4097,11 +4097,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Core\\PatternForCore.Core.csproj",
+      "projectUniqueName": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Core\\PatternForCore.Core.csproj",
       "projectName": "PatternForCore.Core",
-      "projectPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Core\\PatternForCore.Core.csproj",
+      "projectPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Core\\PatternForCore.Core.csproj",
       "packagesPath": "C:\\Users\\Hesapkurdu\\.nuget\\packages\\",
-      "outputPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Core\\obj\\",
+      "outputPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4115,14 +4115,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\Hesapkurdu\\Desktop\\Local Nuget": {},
         "http://repository.hesapkurdu.com:9191/nuget/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Models\\PatternForCore.Models.csproj": {
-              "projectPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Models\\PatternForCore.Models.csproj"
+            "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Models\\PatternForCore.Models.csproj": {
+              "projectPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Models\\PatternForCore.Models.csproj"
             }
           }
         }
@@ -4166,10 +4167,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

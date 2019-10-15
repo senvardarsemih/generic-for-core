@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Web\\PatternForCore.Web.csproj": {}
+    "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Web\\PatternForCore.Web.csproj": {}
   },
   "projects": {
-    "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Core\\PatternForCore.Core.csproj": {
+    "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Core\\PatternForCore.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Core\\PatternForCore.Core.csproj",
+        "projectUniqueName": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Core\\PatternForCore.Core.csproj",
         "projectName": "PatternForCore.Core",
-        "projectPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Core\\PatternForCore.Core.csproj",
+        "projectPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Core\\PatternForCore.Core.csproj",
         "packagesPath": "C:\\Users\\Hesapkurdu\\.nuget\\packages\\",
-        "outputPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Core\\obj\\",
+        "outputPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -25,14 +25,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Hesapkurdu\\Desktop\\Local Nuget": {},
           "http://repository.hesapkurdu.com:9191/nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Models\\PatternForCore.Models.csproj": {
-                "projectPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Models\\PatternForCore.Models.csproj"
+              "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Models\\PatternForCore.Models.csproj": {
+                "projectPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Models\\PatternForCore.Models.csproj"
               }
             }
           }
@@ -76,21 +77,27 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Models\\PatternForCore.Models.csproj": {
+    "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Models\\PatternForCore.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Models\\PatternForCore.Models.csproj",
+        "projectUniqueName": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Models\\PatternForCore.Models.csproj",
         "projectName": "PatternForCore.Models",
-        "projectPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Models\\PatternForCore.Models.csproj",
+        "projectPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Models\\PatternForCore.Models.csproj",
         "packagesPath": "C:\\Users\\Hesapkurdu\\.nuget\\packages\\",
-        "outputPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Models\\obj\\",
+        "outputPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -104,6 +111,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Hesapkurdu\\Desktop\\Local Nuget": {},
           "http://repository.hesapkurdu.com:9191/nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -141,21 +149,27 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Services\\PatternForCore.Services.csproj": {
+    "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Services\\PatternForCore.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Services\\PatternForCore.Services.csproj",
+        "projectUniqueName": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Services\\PatternForCore.Services.csproj",
         "projectName": "PatternForCore.Services",
-        "projectPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Services\\PatternForCore.Services.csproj",
+        "projectPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Services\\PatternForCore.Services.csproj",
         "packagesPath": "C:\\Users\\Hesapkurdu\\.nuget\\packages\\",
-        "outputPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Services\\obj\\",
+        "outputPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -169,17 +183,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Hesapkurdu\\Desktop\\Local Nuget": {},
           "http://repository.hesapkurdu.com:9191/nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Core\\PatternForCore.Core.csproj": {
-                "projectPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Core\\PatternForCore.Core.csproj"
+              "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Core\\PatternForCore.Core.csproj": {
+                "projectPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Core\\PatternForCore.Core.csproj"
               },
-              "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Models\\PatternForCore.Models.csproj": {
-                "projectPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Models\\PatternForCore.Models.csproj"
+              "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Models\\PatternForCore.Models.csproj": {
+                "projectPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Models\\PatternForCore.Models.csproj"
               }
             }
           }
@@ -201,21 +216,27 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Web\\PatternForCore.Web.csproj": {
+    "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Web\\PatternForCore.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Web\\PatternForCore.Web.csproj",
+        "projectUniqueName": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Web\\PatternForCore.Web.csproj",
         "projectName": "PatternForCore.Web",
-        "projectPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Web\\PatternForCore.Web.csproj",
+        "projectPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Web\\PatternForCore.Web.csproj",
         "packagesPath": "C:\\Users\\Hesapkurdu\\.nuget\\packages\\",
-        "outputPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Web\\obj\\",
+        "outputPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -229,17 +250,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Hesapkurdu\\Desktop\\Local Nuget": {},
           "http://repository.hesapkurdu.com:9191/nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Models\\PatternForCore.Models.csproj": {
-                "projectPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Models\\PatternForCore.Models.csproj"
+              "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Models\\PatternForCore.Models.csproj": {
+                "projectPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Models\\PatternForCore.Models.csproj"
               },
-              "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Services\\PatternForCore.Services.csproj": {
-                "projectPath": "C:\\Experimentals\\genericforcore\\src\\PatternForCore.Services\\PatternForCore.Services.csproj"
+              "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Services\\PatternForCore.Services.csproj": {
+                "projectPath": "C:\\Repos\\github\\generic-for-core\\src\\PatternForCore.Services\\PatternForCore.Services.csproj"
               }
             }
           }
@@ -305,10 +327,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

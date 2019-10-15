@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using PatternForCore.Models.DTO;
 using PatternForCore.Models.Identity;
+using PatternForCore.Web.Controllers;
 
 namespace PatternForCore.Controllers
 {
