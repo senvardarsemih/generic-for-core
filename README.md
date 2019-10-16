@@ -8,4 +8,4 @@ Generic Repository &amp; UOW Pattern For ASP.NET Core
 * simple experimental generic repository pattern demo on .net core *
 
 * You have to setup your own connection string in appsettings.json file.
-* You have to run the entity framework core migration via package manager console
+* You have to run the entity framework core migration via package manager console (In Visual Studio go to Tools -> Nuget Package Manager -> Package Manager Console then start migration with 'Update-Database' command
