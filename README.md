@@ -1,5 +1,4 @@
-# genericforcore
-Generic Repository &amp; UOW Pattern For ASP.NET Core 
+# Generic Repository &amp; UOW Pattern For .NET Core 3.1
 
 [![Build status](https://ci.appveyor.com/api/projects/status/1gum36aiadit63bk/branch/master?svg=true)](https://ci.appveyor.com/project/senvardarsemih/genericforcore/branch/master)
 [![Build Status](https://travis-ci.org/senvardarsemih/generic-for-core.svg?branch=master)](https://travis-ci.org/senvardarsemih/generic-for-core)
