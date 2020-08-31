@@ -11,12 +11,12 @@ namespace PatternForCore.Core.Repositories.Base
     public class GenericRepository<T> : IGenericRepository<T>
          where T : class
     {
-        private readonly IDatabaseContext context;
+        private readonly IDatabaseContext _context;
         private readonly DbSet<T> dbSet;
 
         public GenericRepository(IDatabaseContext context)
         {
-            this.context = context;
+            _context = context;
             dbSet = context.Set<T>();
         }
 
@@ -69,7 +69,7 @@ namespace PatternForCore.Core.Repositories.Base
         
         public IQueryable<T> RawSql(string query, params object[] parameters)
         {
-            return dbSet.FromSql(query, parameters);
+            return dbSet.FromSqlRaw(query, parameters);
         }
         
         public IQueryable<T> GetAll(string include, string include2)
@@ -90,7 +90,7 @@ namespace PatternForCore.Core.Repositories.Base
 
         public virtual EntityState HardDelete(T entity)
         {
-            return this.dbSet.Remove(entity).State;
+            return dbSet.Remove(entity).State;
         }
         public virtual EntityState Update(T entity)
         {

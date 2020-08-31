@@ -1,74 +1,41 @@
-﻿using System;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using PatternForCore.Core.EFContext;
-using PatternForCore.Core.Factory;
-using PatternForCore.Core.Repositories.Base;
-using PatternForCore.Core.Repositories.Interfaces;
-using PatternForCore.Core.Uow;
-using PatternForCore.Models.Configuration;
-using PatternForCore.Models.Identity;
-using PatternForCore.Services;
-using PatternForCore.Services.Base.Contracts;
+using PatternForCore.Web.Extensions;
+using System;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc;
 
-namespace PatternForCore
+namespace PatternForCore.Web
 {
     public class Startup
     {
-        public Startup(IHostingEnvironment env)
+        private IConfiguration Configuration { get; }
+        private IWebHostEnvironment Environment { get; }
+
+        public Startup(IWebHostEnvironment env)
         {
-            //Configuration = configuration;
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddJsonFile("appsettings.json", false, false)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true)
                 .AddEnvironmentVariables();
-            Configuration = builder.Build();
-        }
 
-        public IConfiguration Configuration { get; }
+            Configuration = builder.Build();
+            Environment = env;
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
-            services.Configure<ConnectionSettings>(Configuration.GetSection("ConnectionStrings"));
-            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddScoped<IDatabaseContext, Core.EFContext.DatabaseContext>();
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            services.AddTransient(typeof(IMovieServices), typeof(MovieServices));
-            services.AddTransient<IContextFactory, ContextFactory>();
-            services.AddTransient<IUnitOfWork, UnitOfWork>();
-
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<DatabaseContext>()
-                .AddDefaultTokenProviders();
-
-            services.Configure<IdentityOptions>(options =>
-            {
-                // Password settings
-                options.Password.RequireDigit = false;
-                options.Password.RequiredLength = 1;
-                options.Password.RequireNonAlphanumeric = false;
-                options.Password.RequireUppercase = false;
-                options.Password.RequireLowercase = false;
-                options.Password.RequiredUniqueChars = 1;
-
-                // Lockout settings
-                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
-                options.Lockout.MaxFailedAccessAttempts = 5;
-                options.Lockout.AllowedForNewUsers = true;
-
-                // User settings
-                options.User.RequireUniqueEmail = false;
-            });
-
+            services.AddDbContexts(Configuration, Environment);
+            services.AddInjections();
+            services.AddIdentity();
+            services
+                .AddControllersWithViews()
+                .SetCompatibilityVersion(CompatibilityVersion.Latest);
             services.ConfigureApplicationCookie(options =>
             {
                 // Cookie settings
@@ -82,7 +49,7 @@ namespace PatternForCore
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -93,14 +60,14 @@ namespace PatternForCore
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseAuthentication();
+            app.UseLogger(env, loggerFactory);
             app.UseStaticFiles();
-
-            app.UseMvc(routes =>
+            app.UseRouting();
+            app.UseAuthorization();
+            app.UseEndpoints(endpoints =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
