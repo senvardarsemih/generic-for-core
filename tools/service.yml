@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: genericforcore
+spec:
+  type: LoadBalancer
+  selector:
+    app: gfc-app
+  ports:
+  - port: 80
+    targetPort: 80

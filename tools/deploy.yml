@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gfc-app
+spec:
+  selector:
+    matchLabels:
+      app: gfc-app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: gfc-app
+    spec:
+      containers:
+      - name: gfc-app
+        image: gfcapp:1.0
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
